@@ -16,6 +16,13 @@ body {
     overflow-x: hidden;
 }
 
+@font-face {
+    font-family: 'SanskritFont';
+    src: url('assets/sanskrit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -77,9 +84,10 @@ body {
 }
 
 .main-title {
+    font-family: 'SanskritFont', serif;
     font-size: 20px;
-    font-weight: 700;
-    color: #2c5f2d;
+    font-weight: 400;
+    color: #3b6830;
     margin: 0;
     line-height: 1.2;
     letter-spacing: 1px;
@@ -422,96 +430,153 @@ body {
 /* Dive Deeper Section */
 .dive-deeper {
     padding: 80px 0;
-    background: linear-gradient(135deg, #fff9e6 0%, #ffe6f0 100%);
+    font-family: 'Open Sans', sans-serif;
+    /* Clean background - remove gradients if not matching exactly, but keeping clean */
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
+.dive-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0;
+    /* Removed gap to have tight blocks if needed, or small gap */
+    max-width: 1000px;
 }
 
-.info-card {
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    color: white;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+.dive-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
 }
 
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+.dive-left {
+    background-color: #743B80;
+    /* Purple */
+    border-radius: 20px 0 0 20px;
+    align-items: flex-start;
 }
 
-.purple-card {
-    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+.dive-right {
+    background-color: #F39200;
+    /* Orange */
+    border-radius: 0 20px 20px 0;
+    align-items: flex-start;
 }
 
-.orange-card {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-}
-
-.blue-card {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-}
-
-.card-icon {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.info-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-/* Center Logo */
-.center-logo {
+.dive-center {
+    flex: 0 0 220px;
+    /* Fixed width for center logo area */
     display: flex;
     justify-content: center;
-    margin: 50px 0;
-}
-
-.circular-logo {
-    width: 200px;
-    height: 200px;
+    align-items: center;
     position: relative;
+    z-index: 10;
 }
 
-.logo-ring {
+.dive-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 25px;
     width: 100%;
-    height: 100%;
-    border: 8px solid #ff6b35;
+    transition: transform 0.2s;
+}
+
+.dive-link:last-child {
+    margin-bottom: 0;
+}
+
+.dive-link:hover {
+    transform: translateX(5px);
+}
+
+.dive-icon {
+    width: 30px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    /* Make icons white */
+}
+
+.dive-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Center Logo Styles */
+.circular-logo {
+    width: 220px;
+    height: 220px;
+    background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    animation: rotate 20s linear infinite;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-ring {
+    width: 180px;
+    height: 180px;
+    border: 8px solid #F39200;
+    /* Orange ring */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .logo-center {
-    text-align: center;
-    font-weight: 700;
-    color: #ff6b35;
-    font-size: 14px;
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
+    align-items: center;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+.logo-top {
+    font-size: 14px;
+    font-weight: 700;
+    color: #F39200;
+    letter-spacing: 1px;
+}
+
+.logo-bottom {
+    font-size: 14px;
+    font-weight: 700;
+    color: #F39200;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsiveness for Dive Deeper */
+@media (max-width: 900px) {
+    .dive-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    to {
-        transform: rotate(360deg);
+    .dive-block {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px !important;
+        /* Reset border radius for standalone blocks */
+        align-items: center;
+        text-align: center;
+    }
+
+    .dive-link {
+        justify-content: center;
+    }
+
+    .dive-center {
+        order: -1;
+        /* Move logo to top on mobile */
+        margin-bottom: 10px;
     }
 }
 
