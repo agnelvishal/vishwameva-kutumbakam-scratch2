@@ -33,7 +33,7 @@ body {
 /* Header Styles */
 /* Header Styles */
 .header {
-    background-color: rgba(190, 222, 182, 1);
+    background-color: #bedeb6;
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -85,8 +85,8 @@ body {
 
 .main-title {
     font-family: 'SanskritFont', serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: bold;
     color: #3b6830;
     margin: 0;
     line-height: 1.2;
@@ -95,9 +95,9 @@ body {
 }
 
 .sub-title {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
-    color: #ff6b35;
+    color: #3b6830;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -128,7 +128,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #3b6830;
     padding: 10px 15px;
     /* More padding */
     border-radius: 5px;
@@ -140,8 +140,8 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background: rgba(255, 255, 255, 0.8);
-    color: #ff6b35;
+    background: #fbb149;
+    color: #532563;
 }
 
 /* Responsive adjustment */
@@ -288,11 +288,11 @@ body {
 }
 
 .orange-banner {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: #fbb149;
 }
 
 .green-banner {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    background: #138808;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -452,14 +452,14 @@ body {
 }
 
 .dive-left {
-    background-color: #743B80;
+    background-color: #994fb2;
     /* Purple */
     border-radius: 20px 0 0 20px;
     align-items: flex-start;
 }
 
 .dive-right {
-    background-color: #F39200;
+    background-color: #fbb149;
     /* Orange */
     border-radius: 0 20px 20px 0;
     align-items: flex-start;
@@ -583,7 +583,7 @@ body {
 /* Initiated Zen Abodes */
 .initiated-zen {
     padding: 80px 0;
-    background: linear-gradient(135deg, #e8f5e9 0%, #e1f5fe 100%);
+    background: #97bb89;
 }
 
 .section-description {
@@ -715,7 +715,7 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #2c5f2d, #1e4620);
+    background: #97bb89;
     color: white;
     padding: 50px 0 30px;
     text-align: center;
