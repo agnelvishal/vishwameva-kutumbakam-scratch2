@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -36,9 +38,11 @@
                         </button>
                     </div>
                 </div>
+                <!-- Navigation -->
                 <div class="header-bottom">
                     <nav class="nav">
                         <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
                             <li class="nav-dropdown">
                                 <a href="dream.html" class="nav-link">The Dream</a>
                                 <ul class="dropdown-menu">
@@ -48,9 +52,9 @@
                                 </ul>
                             </li>
                             <li class="nav-dropdown">
-                                <a href="zen-abodes.html" class="nav-link">Zen Abodes</a>
+                                <a href="zen-abodes.html" class="nav-link active">Zen Abodes</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="locations.html">Dream Zen Abodes</a></li>
+                                    <li><a href="locations.html" class="active">Dream Zen Abodes</a></li>
                                     <li><a href="actualized.html">Actualized Zen Abodes</a></li>
                                     <li><a href="initiated.html">Initiated Zen Abodes</a></li>
                                 </ul>
@@ -78,138 +82,88 @@
         </div>
     </header>
 
+    <!-- Page Banner -->
+    <div class="page-banner">
+        <h1>Dream Zen Abodes</h1>
+    </div>
+
     <!-- Locations Content -->
-    <section class="page-content">
-        <div class="container">
-            <h1 class="page-title">Dream Zen Abodes</h1>
+    <main class="page-container">
+        <div class="content-section" style="text-align: center; margin-bottom: 40px;">
+            <p>Explore our dream locations around the world where we envision creating harmonious Zen Abodes. Each
+                location has been carefully selected for its unique cultural significance, natural beauty, and potential
+                to foster community and spiritual growth.</p>
+        </div>
 
-            <div class="content-section">
-                <p>Explore our dream locations around the world where we envision creating harmonious Zen Abodes. Each
-                    location has been carefully selected for its unique cultural significance, natural beauty, and
-                    potential to foster community and spiritual growth.</p>
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Auroville, India</h2>
+                    <p class="card-text">Auroville is an experimental township in Viluppuram district, mostly in the
+                        state of Tamil Nadu, India, with some parts in the Union Territory of Pondicherry. It was
+                        founded in 1968 by Mirra Alfassa and designed by architect Roger Anger.</p>
+                    <a href="#" class="card-link">Learn More</a>
+                </div>
             </div>
-
-            <div class="locations-grid">
-                <div class="location-card">
-                    <img src="auroville.png" alt="Auroville, India">
-                    <div class="location-content">
-                        <h3>Auroville, India</h3>
-                        <p>Auroville is an experimental township in Viluppuram district, mostly in the state of Tamil
-                            Nadu, India, with some parts in the Union Territory of Pondicherry. It was founded in 1968
-                            by Mirra Alfassa and designed by architect Roger Anger. Auroville – an ideal township
-                            devoted to an experiment in human unity.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
+            <!-- Card 2 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-mystery.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Northern Light - Akureyri, Iceland</h2>
+                    <p class="card-text">Akureyri, Iceland's charming northern gem, nestles by Eyjafjörður, boasting
+                        majestic mountain backdrops. Known as the "Capital of the North," it offers vibrant culture and
+                        serene Botanical Garden.</p>
+                    <a href="#" class="card-link">Learn More</a>
                 </div>
-
-                <div class="location-card">
-                    <img src="fiordland.png" alt="Northern Light, Akureyri">
-                    <div class="location-content">
-                        <h3>Northern Light - Akureyri, Iceland</h3>
-                        <p>Akureyri, Iceland's charming northern gem, nestles by Eyjafjörður, boasting majestic mountain
-                            backdrops. Known as the "Capital of the North," it offers vibrant culture, including the
-                            iconic Akureyri Church and serene Botanical Garden. Winter brings snow adventures, while
-                            summer illuminates stunning landscapes under the midnight sun.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Taj Mahal, India</h2>
+                    <p class="card-text">The Taj Mahal, India's architectural masterpiece in Agra, is a UNESCO World
+                        Heritage site. Built by Emperor Shah Jahan in the 17th century in memory of his wife Mumtaz
+                        Mahal.</p>
+                    <a href="#" class="card-link">Learn More</a>
                 </div>
-
-                <div class="location-card">
-                    <img src="auroville.png" alt="Taj Mahal, India">
-                    <div class="location-content">
-                        <h3>Taj Mahal, India</h3>
-                        <p>The Taj Mahal, India's architectural masterpiece in Agra, is a UNESCO World Heritage site.
-                            Built by Emperor Shah Jahan in the 17th century in memory of his wife Mumtaz Mahal, this
-                            iconic ivory-white marble mausoleum is a symbol of eternal love, featuring intricate
-                            craftsmanship and symmetrical beauty.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Colosseum, Rome</h2>
+                    <p class="card-text">The Colosseum in Rome, Italy, an ancient amphitheater built in 70-80 AD, is an
+                        iconic symbol of Roman engineering and entertainment. Hosting gladiator contests and spectacles
+                        for thousands.</p>
+                    <a href="#" class="card-link">Learn More</a>
                 </div>
-
-                <div class="location-card">
-                    <img src="fiordland.png" alt="Colosseum, Rome">
-                    <div class="location-content">
-                        <h3>Colosseum, Rome</h3>
-                        <p>The Colosseum in Rome, Italy, an ancient amphitheater built in 70-80 AD, is an iconic symbol
-                            of Roman engineering and entertainment. Hosting gladiator contests and spectacles for
-                            thousands, it stands as a monumental testament to Roman history, architectural prowess, and
-                            cultural heritage.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-mystery.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Victoria Falls, Zambia</h2>
+                    <p class="card-text">Victoria Falls, located on the Zambezi River, defines the border between Zambia
+                        and Zimbabwe. Known as "The Smoke That Thunders," it's one of the world's largest waterfalls.
+                    </p>
+                    <a href="#" class="card-link">Learn More</a>
                 </div>
-
-                <div class="location-card">
-                    <img src="auroville.png" alt="Victoria Falls, Zambia">
-                    <div class="location-content">
-                        <h3>Victoria Falls, Zambia</h3>
-                        <p>Victoria Falls, located on the Zambezi River, defines the border between Zambia and Zimbabwe.
-                            Known as "The Smoke That Thunders," it's one of the world's largest waterfalls, captivating
-                            with its thunderous roar, vast cascades, and a mesmerizing curtain of mist.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <img src="fiordland.png" alt="Paracutin Volcano, Mexico">
-                    <div class="location-content">
-                        <h3>Paracutin Volcano, Mexico</h3>
-                        <p>Parícutin Volcano in Mexico emerged suddenly in 1943 from a farmer's field, growing to over
-                            1,300 feet. Its eruption was witnessed, and its creation studied, making it a unique
-                            scientific landmark. Parícutin's rapid formation is a remarkable testament to nature's
-                            unpredictable forces.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <img src="auroville.png" alt="Amazon River, Ecuador">
-                    <div class="location-content">
-                        <h3>Amazon River, Ecuador</h3>
-                        <p>The Amazon River in Ecuador flows through dense rainforests, teeming with unparalleled
-                            biodiversity. This vital artery of the Amazon Basin sustains vibrant ecosystems, offering
-                            boat excursions for wildlife spotting and glimpses of indigenous cultures.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <img src="fiordland.png" alt="Komodo Island, Indonesia">
-                    <div class="location-content">
-                        <h3>Komodo Island, Indonesia</h3>
-                        <p>Komodo Island in Indonesia is famed for its iconic Komodo dragons, the world's largest
-                            lizards. This UNESCO World Heritage site offers rugged landscapes, pink sand beaches, and
-                            unparalleled biodiversity. Visitors encounter these prehistoric creatures in their natural
-                            habitat.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <img src="auroville.png" alt="Inuit, Canada">
-                    <div class="location-content">
-                        <h3>Inuit, Canada</h3>
-                        <p>The Inuit, indigenous peoples of Canada's Arctic regions, inhabit vast territories spanning
-                            from Alaska to Greenland. Renowned for their rich cultural heritage, traditional hunting,
-                            and unique adaptations to harsh environments, they possess deep-rooted knowledge of
-                            survival, art, and spirituality.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <img src="fiordland.png" alt="Mystery Location">
-                    <div class="location-content">
-                        <h3>Mystery Location</h3>
-                        <p>Nestled amidst the vast expanse of Iceland, the Blue Lagoon is a geothermal oasis offering a
-                            surreal experience. Its milky blue waters, rich in minerals, create a rejuvenating spa
-                            haven. Surrounded by volcanic landscapes and steamy waters, it's a serene escape that merges
-                            natural beauty with therapeutic relaxation.</p>
-                        <button class="learn-more-btn">Learn More</button>
-                    </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Paracutin Volcano, Mexico</h2>
+                    <p class="card-text">Parícutin Volcano in Mexico emerged suddenly in 1943 from a farmer's field,
+                        growing to over 1,300 feet. Its eruption was witnessed, and its creation studied, making it a
+                        unique landmark.</p>
+                    <a href="#" class="card-link">Learn More</a>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

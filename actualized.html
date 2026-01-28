@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -37,9 +39,11 @@
                         </button>
                     </div>
                 </div>
+                <!-- Navigation -->
                 <div class="header-bottom">
                     <nav class="nav">
                         <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
                             <li class="nav-dropdown">
                                 <a href="dream.html" class="nav-link">The Dream</a>
                                 <ul class="dropdown-menu">
@@ -49,10 +53,10 @@
                                 </ul>
                             </li>
                             <li class="nav-dropdown">
-                                <a href="zen-abodes.html" class="nav-link">Zen Abodes</a>
+                                <a href="zen-abodes.html" class="nav-link active">Zen Abodes</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="locations.html">Dream Zen Abodes</a></li>
-                                    <li><a href="actualized.html">Actualized Zen Abodes</a></li>
+                                    <li><a href="actualized.html" class="active">Actualized Zen Abodes</a></li>
                                     <li><a href="initiated.html">Initiated Zen Abodes</a></li>
                                 </ul>
                             </li>
@@ -79,85 +83,51 @@
         </div>
     </header>
 
-    <!-- Actualized Abodes Content -->
-    <section class="page-content">
-        <div class="container">
-            <h1 class="page-title">Actualized Zen Abodes</h1>
-            <p
-                style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: var(--text-secondary);">
-                Welcome to our realized dreams - sanctuaries of peace and community that are now open and welcoming
-                visitors from around the world.
-            </p>
+    <!-- Page Banner -->
+    <div class="page-banner">
+        <h1>Actualized Zen Abodes</h1>
+    </div>
 
-            <div class="locations-grid">
-                <div class="location-card">
-                    <div class="location-image"
-                        style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), url('auroville.png'); background-size: cover; background-position: center;">
-                        <div class="location-badge">Now Open</div>
-                    </div>
-                    <div class="location-content">
-                        <h3 class="location-title">Auroville Sanctuary</h3>
-                        <p class="location-description">A thriving community in Tamil Nadu, India, where unity and
-                            spiritual growth flourish. Experience the harmony of collective living in this established
-                            sanctuary.</p>
-                        <div class="location-features">
-                            <span class="feature-tag">🧘 Meditation Spaces</span>
-                            <span class="feature-tag">🌿 Organic Gardens</span>
-                            <span class="feature-tag">🏡 Community Living</span>
-                        </div>
-                        <a href="#" class="location-btn">Visit Now</a>
-                    </div>
-                </div>
+    <!-- Actualized Content -->
+    <main class="page-container">
+        <div class="content-section" style="text-align: center; margin-bottom: 40px;">
+            <p>Welcome to our realized dreams - sanctuaries of peace and community that are now open and welcoming
+                visitors from around the world.</p>
+        </div>
 
-                <div class="location-card">
-                    <div class="location-image"
-                        style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.9), rgba(0, 242, 254, 0.9)); background-size: cover; background-position: center;">
-                        <div class="location-badge">Now Open</div>
-                    </div>
-                    <div class="location-content">
-                        <h3 class="location-title">Himalayan Retreat</h3>
-                        <p class="location-description">Nestled in the serene mountains of Nepal, this abode offers
-                            breathtaking views and profound tranquility. A perfect escape for those seeking inner peace.
-                        </p>
-                        <div class="location-features">
-                            <span class="feature-tag">⛰️ Mountain Views</span>
-                            <span class="feature-tag">🕉️ Yoga Studios</span>
-                            <span class="feature-tag">🌄 Sunrise Sessions</span>
-                        </div>
-                        <a href="#" class="location-btn">Visit Now</a>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <div class="location-image"
-                        style="background: linear-gradient(135deg, rgba(250, 112, 154, 0.9), rgba(254, 225, 64, 0.9)); background-size: cover; background-position: center;">
-                        <div class="location-badge">Now Open</div>
-                    </div>
-                    <div class="location-content">
-                        <h3 class="location-title">Bali Harmony Haven</h3>
-                        <p class="location-description">Experience the magic of Bali in this tropical paradise. A blend
-                            of traditional Balinese culture and modern sustainable living practices.</p>
-                        <div class="location-features">
-                            <span class="feature-tag">🌺 Tropical Gardens</span>
-                            <span class="feature-tag">🏖️ Beach Access</span>
-                            <span class="feature-tag">🎨 Art Workshops</span>
-                        </div>
-                        <a href="#" class="location-btn">Visit Now</a>
-                    </div>
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Auroville Sanctuary</h2>
+                    <p class="card-text">A thriving community in Tamil Nadu, India, where unity and spiritual growth
+                        flourish. Experience the harmony of collective living.</p>
+                    <a href="#" class="card-link">Visit Now</a>
                 </div>
             </div>
-
-            <div
-                style="margin-top: 80px; padding: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; text-align: center; color: white;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Experience Zen?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.95;">Book your stay at one of our
-                    actualized Zen Abodes and begin your journey to inner peace.</p>
-                <a href="#"
-                    style="display: inline-block; padding: 15px 40px; background: white; color: #667eea; border-radius: 30px; font-weight: 600; text-decoration: none; transition: transform 0.3s ease;">Book
-                    Your Stay</a>
+            <!-- Card 2 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-mystery.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Himalayan Retreat</h2>
+                    <p class="card-text">Nestled in the serene mountains of Nepal, this abode offers breathtaking views
+                        and profound tranquility.</p>
+                    <a href="#" class="card-link">Visit Now</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
+                <div class="content-card-body">
+                    <h2 class="card-title">Bali Harmony Haven</h2>
+                    <p class="card-text">Experience the magic of Bali in this tropical paradise. A blend of traditional
+                        Balinese culture and modern sustainable living practices.</p>
+                    <a href="#" class="card-link">Visit Now</a>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

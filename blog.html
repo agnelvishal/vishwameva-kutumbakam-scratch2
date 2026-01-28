@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildest Dream Blog | Vishwameva Kutumbakam</title>
-    <meta name="description" content="Explore inspiring stories and insights from the Vishwameva Kutumbakam community">
+    <meta name="description" content="Read our latest stories and updates from the Wildest Dream Blog">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -36,15 +38,17 @@
                         </button>
                     </div>
                 </div>
+                <!-- Navigation -->
                 <div class="header-bottom">
                     <nav class="nav">
                         <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
                             <li class="nav-dropdown">
-                                <a href="dream.html" class="nav-link">The Dream</a>
+                                <a href="dream.html" class="nav-link active">The Dream</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="story.html">Our Dream Story</a></li>
                                     <li><a href="vision.html">Vision & Mission</a></li>
-                                    <li><a href="blog.html">Wildest Dream Blog</a></li>
+                                    <li><a href="blog.html" class="active">Wildest Dream Blog</a></li>
                                 </ul>
                             </li>
                             <li class="nav-dropdown">
@@ -78,115 +82,94 @@
         </div>
     </header>
 
-    <!-- Blog Content -->
-    <section class="page-content">
-        <div class="container">
-            <h1 class="page-title">Wildest Dream Blog</h1>
-            <p
-                style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: var(--text-secondary);">
-                Discover inspiring stories, insights, and dreams from our global community of dreamers and visionaries.
-            </p>
+    <!-- Page Banner -->
+    <div class="page-banner">
+        <h1>Wildest Dream Blog</h1>
+    </div>
 
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image"
-                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 200px; border-radius: 12px 12px 0 0;">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">January 10, 2026</span>
-                            <span class="blog-category">Unity</span>
-                        </div>
-                        <h2 class="blog-title">The Power of Universal Connection</h2>
-                        <p class="blog-excerpt">Exploring how our shared dreams create bridges across cultures,
-                            continents, and communities. When we dream together, we create a tapestry of hope that spans
-                            the globe.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </article>
+    <!-- Page Nav -->
+    <div class="page-nav">
+        <ul>
+            <li><a href="#" class="active">All Posts</a></li>
+            <li><a href="#">Dreams</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </div>
 
-                <article class="blog-card">
-                    <div class="blog-image"
-                        style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 200px; border-radius: 12px 12px 0 0;">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">January 5, 2026</span>
-                            <span class="blog-category">Zen Abodes</span>
-                        </div>
-                        <h2 class="blog-title">Finding Peace in Sacred Spaces</h2>
-                        <p class="blog-excerpt">A journey through our Zen Abodes, where tranquility meets community.
-                            Discover how these sanctuaries are transforming lives and fostering deep connections.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </article>
+    <!-- Main Content -->
+    <main class="page-container">
+        <div class="cards-grid">
+            <!-- Article 1 -->
+            <article class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
+                <div class="content-card-body">
+                    <div class="blog-meta">Mar 15, 2023 • 2 min read</div>
+                    <h2 class="card-title">The Power of Dreams</h2>
+                    <p class="card-text">Dreams are the seeds of reality. Discover how our community is turning
+                        shared dreams into tangible actions...</p>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
+            </article>
 
-                <article class="blog-card">
-                    <div class="blog-image"
-                        style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 200px; border-radius: 12px 12px 0 0;">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 28, 2025</span>
-                            <span class="blog-category">Community</span>
-                        </div>
-                        <h2 class="blog-title">Stories from Our Global Family</h2>
-                        <p class="blog-excerpt">Meet the dreamers who are making the vision of Vishwameva Kutumbakam a
-                            reality. Their stories inspire us to believe in the impossible.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </article>
+            <!-- Article 2 -->
+            <article class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-mystery.jpg');"></div>
+                <div class="content-card-body">
+                    <div class="blog-meta">Apr 2, 2023 • 3 min read</div>
+                    <h2 class="card-title">Finding Your Inner Zen</h2>
+                    <p class="card-text">In the chaos of modern life, finding stillness is essential. Explore our
+                        tips for cultivating inner peace...</p>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
+            </article>
 
-                <article class="blog-card">
-                    <div class="blog-image"
-                        style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); height: 200px; border-radius: 12px 12px 0 0;">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 20, 2025</span>
-                            <span class="blog-category">Vision</span>
-                        </div>
-                        <h2 class="blog-title">Dreaming Beyond Boundaries</h2>
-                        <p class="blog-excerpt">What happens when we dare to dream without limits? Explore the wildest
-                            dreams that are shaping our collective future and redefining what's possible.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image"
-                        style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); height: 200px; border-radius: 12px 12px 0 0;">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 15, 2025</span>
-                            <span class="blog-category">Inspiration</span>
-                        </div>
-                        <h2 class="blog-title">The Art of Collective Dreaming</h2>
-                        <p class="blog-excerpt">How do individual dreams weave together to create a shared vision?
-                            Discover the magic that happens when dreamers unite with a common purpose.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image"
-                        style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); height: 200px; border-radius: 12px 12px 0 0;">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 10, 2025</span>
-                            <span class="blog-category">Harmony</span>
-                        </div>
-                        <h2 class="blog-title">Harmony in Diversity</h2>
-                        <p class="blog-excerpt">Celebrating the beautiful mosaic of cultures, perspectives, and dreams
-                            that make our universal family truly extraordinary and unique.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </article>
-            </div>
+            <!-- Article 3 -->
+            <article class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
+                <div class="content-card-body">
+                    <div class="blog-meta">Apr 20, 2023 • 4 min read</div>
+                    <h2 class="card-title">Community Building 101</h2>
+                    <p class="card-text">Building a global family starts with local connections. Learn how to foster
+                        community in your neighborhood...</p>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
+            </article>
+            <!-- Article 4 -->
+            <article class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-mystery.jpg');"></div>
+                <div class="content-card-body">
+                    <div class="blog-meta">May 5, 2023 • 2 min read</div>
+                    <h2 class="card-title">A Night Under the Stars</h2>
+                    <p class="card-text">Our recent gathering was a magical night of storytelling and celestial
+                        wonder. Catch up on the highlights...</p>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
+            </article>
+            <!-- Article 5 -->
+            <article class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
+                <div class="content-card-body">
+                    <div class="blog-meta">May 12, 2023 • 3 min read</div>
+                    <h2 class="card-title">Art as Expression</h2>
+                    <p class="card-text">Creativity knows no bounds. See how our members are using art to express the
+                        inexpressible...</p>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
+            </article>
+            <!-- Article 6 -->
+            <article class="content-card">
+                <div class="content-card-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
+                <div class="content-card-body">
+                    <div class="blog-meta">June 1, 2023 • 5 min read</div>
+                    <h2 class="card-title">The Future of Togetherness</h2>
+                    <p class="card-text">What does the future of community look like? We explore trends and visions
+                        for a more connected world...</p>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
+            </article>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

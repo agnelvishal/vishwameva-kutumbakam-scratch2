@@ -6,13 +6,17 @@
 }
 
 :root {
-    --color_11: 255, 255, 255;
+    --color-green: rgb(59, 104, 48);
+    --color-purple: rgb(106, 52, 118);
+    --color-orange: rgb(243, 146, 52);
+    --color-cream: rgb(254, 229, 194);
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Azeret Mono', monospace;
+    /* Default based on welcome text */
     line-height: 1.6;
-    color: #333;
+    color: #000;
     overflow-x: hidden;
 }
 
@@ -34,11 +38,16 @@ body {
 /* Header Styles */
 .header {
     background-color: #bedeb6;
-    padding: 10px 0;
+    padding: 0;
+    height: 106px;
+    /* Exact height */
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    /* Center content vertically */
 }
 
 .header-content {
@@ -84,24 +93,25 @@ body {
 }
 
 .main-title {
-    font-family: 'SanskritFont', serif;
-    font-size: 28px;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 30px;
     font-weight: bold;
-    color: #3b6830;
+    color: var(--color-green);
     margin: 0;
     line-height: 1.2;
-    letter-spacing: 1px;
+    letter-spacing: normal;
     white-space: nowrap;
 }
 
 .sub-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #3b6830;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-green);
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: normal;
     white-space: nowrap;
+    font-family: 'Azeret Mono', monospace;
 }
 
 /* Navigation Container adjustments */
@@ -128,20 +138,24 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #3b6830;
-    padding: 10px 15px;
-    /* More padding */
+    color: var(--color-green);
+    padding: 0 10px;
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
     transition: all 0.3s ease;
     display: block;
+    line-height: 24px;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    background: #fbb149;
-    color: #532563;
+    background: #FBB149;
+    /* Orange background for active/hover */
+    color: rgb(83, 37, 99);
+    /* Purple text */
+    font-weight: 700;
 }
 
 /* Responsive adjustment */
@@ -280,11 +294,30 @@ body {
 
 /* Banner Styles */
 .hero-banner {
-    padding: 10px 30px;
+    padding: 10px 0;
+    /* Full width so no horizontal padding needed on container if text is centered */
     text-align: center;
-    color: white;
+    color: var(--color-cream);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: normal;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+}
+
+.top-banner {
+    top: 0;
+    background: rgb(245, 128, 36);
+    /* Orange */
+}
+
+.bottom-banner {
+    bottom: 0;
+    background: rgb(17, 126, 17);
+    /* Green */
 }
 
 .orange-banner {
@@ -406,7 +439,8 @@ body {
 /* Welcome Section */
 .welcome-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    background: transparent;
+    /* Match body background */
 }
 
 .section-title {
@@ -419,12 +453,16 @@ body {
 }
 
 .welcome-text {
-    text-align: center;
+    text-align: justify;
+    /* Audit said justified */
     font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    max-width: 900px;
+    line-height: 1.4;
+    /* 22.4px / 16px = 1.4 */
+    color: #000;
+    max-width: 775px;
+    /* Audit max-width */
     margin: 0 auto 20px;
+    font-family: 'Azeret Mono', monospace;
 }
 
 /* Dive Deeper Section */
@@ -436,43 +474,61 @@ body {
 
 .dive-container {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    flex-direction: column;
+    /* Stacked vertical blocks with gap */
+    align-items: center;
     gap: 0;
-    /* Removed gap to have tight blocks if needed, or small gap */
-    max-width: 1000px;
+    /* Gap handled by margin/height */
+    max-width: 1200px;
+    position: relative;
+    padding: 50px 0;
 }
 
 .dive-block {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 30px;
+    width: 680px;
+    /* From earlier Step 19 approx */
+    height: 220px;
+    border-radius: 40px;
 }
 
 .dive-left {
-    background-color: #994fb2;
-    /* Purple */
-    border-radius: 20px 0 0 20px;
+    background-color: var(--color-purple);
+    border-radius: 40px;
     align-items: flex-start;
+    height: 220px;
+    /* Approx from analysis */
 }
 
 .dive-right {
-    background-color: #fbb149;
-    /* Orange */
-    border-radius: 0 20px 20px 0;
+    background-color: var(--color-orange);
+    border-radius: 40px;
     align-items: flex-start;
+    height: 220px;
+    /* Approx from analysis */
 }
 
 .dive-center {
-    flex: 0 0 220px;
-    /* Fixed width for center logo area */
+    height: 192px;
+    /* Exact gap */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     z-index: 10;
+}
+
+.dive-left {
+    background-color: var(--color-purple);
+    align-items: center;
+    /* Center content in block */
+}
+
+.dive-right {
+    background-color: var(--color-orange);
+    align-items: center;
 }
 
 .dive-link {
@@ -498,7 +554,8 @@ body {
     width: 30px;
     height: auto;
     filter: brightness(0) invert(1);
-    /* Make icons white */
+    display: none;
+    /* Hide icons if not present in target text-only links */
 }
 
 .dive-text {
@@ -600,15 +657,22 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
+    justify-content: center;
+    /* Center cards */
 }
 
 .zen-card {
     position: relative;
-    border-radius: 15px;
+    border-radius: 40px;
+    /* Updated radius */
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    width: 238px;
+    /* Fixed width */
+    margin: 0 auto;
+    /* Center in grid if single column */
 }
 
 .zen-card:hover {
@@ -618,7 +682,7 @@ body {
 
 .zen-card img {
     width: 100%;
-    height: 300px;
+    height: 309px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -628,24 +692,15 @@ body {
 }
 
 .zen-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: white;
-    padding: 30px 20px;
-}
-
-.zen-overlay h3 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.zen-overlay p {
-    font-size: 14px;
-    opacity: 0.9;
+    background: transparent;
+    /* No dark overlay */
+    position: static;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    /* Hide text unless we confirm it exists, but for now remove the absolute positioning that covers image */
+    display: none;
+    /* Audit said no active text overlays detected */
 }
 
 /* Membership Section */
@@ -715,10 +770,12 @@ body {
 
 /* Footer */
 .footer {
-    background: #97bb89;
-    color: white;
+    background: transparent;
+    color: #000;
     padding: 50px 0 30px;
     text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
 }
 
 .footer-title {
@@ -787,23 +844,488 @@ body {
     letter-spacing: 2px;
 }
 
-.story-content,
-.content-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+/* Split Section Styles (for Dream page etc) */
+.split-section {
+    display: flex;
+    min-height: 500px;
+    width: 100%;
+}
+
+.split-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.split-image {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.bg-purple {
+    background-color: var(--color-purple);
+    color: white;
+}
+
+.bg-orange {
+    background-color: var(--color-orange);
+    /* Or light peach if needed */
+    color: black;
+}
+
+.bg-white {
+    background-color: white;
+    color: black;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.split-title {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-green);
+    /* Default, usually overridden */
+}
+
+.bg-purple .split-title {
+    color: white;
+}
+
+/* Or keep green? Step 81 said Green Title. Use Green. */
+.bg-purple .split-title,
+.bg-orange .split-title,
+.bg-white .split-title {
+    color: var(--color-green);
+}
+
+.split-text {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
-.story-content p,
-.content-section p {
+/* Specific overrides based on observation */
+.bg-purple .split-text {
+    color: white;
+}
+
+.bg-orange .split-text {
+    color: black;
+}
+
+.bg-white .split-text {
+    color: black;
+}
+
+.section-btn {
+    display: inline-block;
+    background-color: var(--color-orange);
+    color: white;
+    /* Step 81 said "orange Learn More button" */
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+/* Story Page Styles */
+.story-page {
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+    /* Light blue to white */
+    padding-bottom: 50px;
+}
+
+/* Page Header & Grid Styles (Reused) */
+.page-banner {
+    background-color: var(--color-purple);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: linear-gradient(rgba(106, 52, 118, 0.8), rgba(106, 52, 118, 0.8)), url('assets/images/hero-collage.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: var(--color-green);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-nav {
+    /* Was blog-nav */
+    background-color: #af96b8;
+    /* Lavender */
+    padding: 15px 0;
+    text-align: center;
+}
+
+.page-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.page-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 1.9;
+    font-family: 'Azeret Mono', monospace;
+}
+
+.page-nav a:hover,
+.page-nav a.active {
+    color: var(--color-green);
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.cards-grid {
+    /* Was blog-grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.content-card {
+    /* Was blog-card */
+    background-color: #f4ce9d;
+    /* Peach */
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-card-image {
+    height: 250px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #222;
+    flex: 1;
+}
+
+.card-link {
+    margin-top: 15px;
+    color: var(--color-purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* FAQ Styles */
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.faq-details {
+    background-color: #fff;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-summary {
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #f9f9f9;
+    list-style: none;
+    /* Hide default marker */
+    position: relative;
+    padding-right: 40px;
+}
+
+.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-summary::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--color-purple);
+}
+
+.faq-details[open] .faq-summary::after {
+    content: '-';
+}
+
+.faq-details[open] .faq-summary {
+    background-color: var(--color-lavender);
+    color: white;
+}
+
+.faq-details[open] .faq-summary::after {
+    color: white;
+}
+
+.faq-content {
+    padding: 20px;
+    line-height: 1.6;
     color: #444;
+    background-color: #fff;
+}
+
+/* Login Page Styles */
+.login-page {
+    background-color: #e8f5e9;
+    /* Light green background */
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2 {
+    color: var(--color-green);
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.form-group {
     margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #274e13;
+}
+
+.social-login {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.social-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Forum Styles */
+.forum-header {
+    background-color: var(--color-purple);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.forum-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.forum-category {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.forum-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category-info h3 {
+    color: var(--color-purple);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.category-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+.category-stats {
+    text-align: right;
+    min-width: 100px;
+}
+
+.stat-count {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-peach);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* Profile Mock Styles */
+.profile-header {
+    background-color: var(--color-lavender);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.profile-card {
+    background: white;
+    max-width: 800px;
+    margin: -40px auto 50px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f4ce9d;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+/* Vision Page Styles */
+.bg-lavender {
+    background-color: #af96b8;
+    /* Lighter purple from audit */
+    color: #333;
+}
+
+.bg-peach {
+    background-color: #f4ce9d;
+    /* Lighter orange from audit */
+    color: #333;
+}
+
+.vision-block {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.vision-block .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-block .section-title {
+    color: var(--color-green);
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.vision-block p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
 }
 
 /* Founders Grid */

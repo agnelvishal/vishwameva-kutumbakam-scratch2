@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision & Mission | Vishwameva Kutumbakam</title>
-    <meta name="description" content="Our Vision and Mission - Vishwameva Kutumbakam">
+    <title>Member Login | Vishwameva Kutumbakam</title>
+    <meta name="description" content="Log in to your Vishwameva Kutumbakam member account.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -44,10 +43,10 @@
                         <ul class="nav-list">
                             <li><a href="index.html" class="nav-link">Home</a></li>
                             <li class="nav-dropdown">
-                                <a href="dream.html" class="nav-link active">The Dream</a>
+                                <a href="dream.html" class="nav-link">The Dream</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="story.html">Our Dream Story</a></li>
-                                    <li><a href="vision.html" class="active">Vision & Mission</a></li>
+                                    <li><a href="vision.html">Vision & Mission</a></li>
                                     <li><a href="blog.html">Wildest Dream Blog</a></li>
                                 </ul>
                             </li>
@@ -68,7 +67,7 @@
                                 </ul>
                             </li>
                             <li class="nav-dropdown">
-                                <a href="member-login.html" class="nav-link">Member Login</a>
+                                <a href="member-login.html" class="nav-link active">Member Login</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="member-profile.html">Member Profile</a></li>
                                     <li><a href="book-benefits.html">Book Benefits</a></li>
@@ -82,46 +81,35 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Vision Section (Lavender) -->
-        <section class="vision-block bg-lavender">
-            <div class="container">
-                <h2 class="section-title">Vision - Vishwameva Kutumbakam</h2>
-                <div class="vision-text">
-                    <!-- Placeholder text from findings -->
-                    <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text”
-                        or double click me to add your own content and make changes to the font. I’m a great place for
-                        you to tell a story and let your users know a little more about you.</p>
+    <div class="login-page">
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+            <form action="#">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
                 </div>
-            </div>
-        </section>
-
-        <!-- Mission Section (White) -->
-        <section class="vision-block bg-white">
-            <div class="container">
-                <h2 class="section-title">Mission - Akshaya Patra Economics Model</h2>
-                <div class="vision-text">
-                    <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text”
-                        or double click me to add your own content and make changes to the font. I’m a great place for
-                        you to tell a story and let your users know a little more about you.</p>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-            </div>
-        </section>
-
-        <!-- Trust Section (Peach) -->
-        <section class="vision-block bg-peach">
-            <div class="container">
-                <h2 class="section-title">Trust and Transparency</h2>
-                <div class="vision-text">
-                    <p>Trust is the reliance on the integrity, strength, and ability of a person or thing. Transparency
-                        is the quality of being open and honest, free from pretense or deceit.</p>
+                <button type="submit" class="login-btn">Log In</button>
+                <div style="margin-top: 15px; font-size: 14px;">
+                    <a href="#" style="color: var(--color-green); text-decoration: none;">Forgot password?</a>
                 </div>
-            </div>
-        </section>
-    </main>
+            </form>
 
-    <!-- Footer -->
+            <div class="social-login">
+                <button class="social-btn">Continue with Google</button>
+                <button class="social-btn">Continue with Facebook</button>
+            </div>
+
+            <div style="margin-top: 20px; font-size: 14px;">
+                New to this community? <a href="#" style="color: var(--color-green); font-weight: 600;">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <h3 class="footer-title">Reach Us</h3>

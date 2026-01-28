@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,6 +21,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="header-top">
+                    <!-- Nav link active state logic relies on JS or manual setting. Setting Dream to active here -->
                     <div class="logo">
                         <a href="index.html">
                             <img src="assets/images/logo.png" alt="Vishwameva Kutumbakam Logo" class="header-logo">
@@ -40,8 +43,11 @@
                 <div class="header-bottom">
                     <nav class="nav">
                         <ul class="nav-list">
+                            <li>
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
                             <li class="nav-dropdown">
-                                <a href="dream.html" class="nav-link">The Dream</a>
+                                <a href="dream.html" class="nav-link active">The Dream</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="story.html">Our Dream Story</a></li>
                                     <li><a href="vision.html">Vision & Mission</a></li>
@@ -79,49 +85,57 @@
         </div>
     </header>
 
-    <!-- Dream Content -->
-    <section class="dream-sections">
-        <div class="container">
-            <div class="dream-card">
-                <h2 class="section-title">Our Dream Story</h2>
-                <div class="dream-content">
+    <!-- Dream Content using Split Layout -->
+    <main>
+        <!-- Section 1: Our Dream Story -->
+        <!-- Left Image, Right Text (Purple) -->
+        <section class="split-section">
+            <div class="split-block split-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
+            <!-- Using placeholder image -->
+            <div class="split-block bg-purple">
+                <h2 class="split-title">Our Dream Story</h2>
+                <div class="split-text">
                     <p>In a world where stars danced freely in the sky, a dream weaver named Luna traversed realms,
                         spinning tales with stardust threads. Her longing was to craft a tapestry of dreams, each thread
                         a story of hope.</p>
-                    <p>One night, she wove a dream of unity, where differences dissolved into harmony. People embraced
-                        diversity, celebrating the unique colors of existence. Laughter echoed across continents,
-                        carrying the melody of understanding.</p>
-                    <a href="story.html" class="learn-more-btn">Learn More</a>
                 </div>
+                <a href="story.html" class="section-btn">Learn More</a>
             </div>
+        </section>
 
-            <div class="dream-card">
-                <h2 class="section-title">Vision & Mission</h2>
-                <div class="dream-content">
-                    <p>In a world where stars danced freely in the sky, a dream weaver named Luna traversed realms,
-                        spinning tales with stardust threads. Her longing was to craft a tapestry of dreams, each thread
-                        a story of hope.</p>
+        <!-- Section 2: Vision & Mission -->
+        <!-- Left Text (White), Right Image (Black/Dark) -->
+        <section class="split-section">
+            <div class="split-block bg-white">
+                <h2 class="split-title">Vision & Mission</h2>
+                <div class="split-text">
                     <p>One night, she wove a dream of unity, where differences dissolved into harmony. People embraced
                         diversity, celebrating the unique colors of existence. Laughter echoed across continents,
                         carrying the melody of understanding.</p>
-                    <a href="vision.html" class="learn-more-btn">Learn More</a>
                 </div>
+                <!-- Assuming standard orange button? Step 81 said "orange Learn More button" -->
+                <a href="vision.html" class="section-btn">Learn More</a>
             </div>
+            <div class="split-block split-image"
+                style="background-color: black; background-image: url('assets/images/hero-mystery.jpg');"></div>
+            <!-- Using placeholder image or black -->
+        </section>
 
-            <div class="dream-card">
-                <h2 class="section-title">Wildest Dream Blog</h2>
-                <div class="dream-content">
+        <!-- Section 3: Wildest Dream Blog -->
+        <!-- Left Image, Right Text (Peach/Orange) -->
+        <section class="split-section">
+            <div class="split-block split-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
+            <div class="split-block bg-orange">
+                <h2 class="split-title">Wildest Dream Blog</h2>
+                <div class="split-text">
                     <p>In a world where stars danced freely in the sky, a dream weaver named Luna traversed realms,
                         spinning tales with stardust threads. Her longing was to craft a tapestry of dreams, each thread
                         a story of hope.</p>
-                    <p>One night, she wove a dream of unity, where differences dissolved into harmony. People embraced
-                        diversity, celebrating the unique colors of existence. Laughter echoed across continents,
-                        carrying the melody of understanding.</p>
-                    <a href="blog.html" class="learn-more-btn">Learn More</a>
                 </div>
+                <a href="blog.html" class="section-btn">Learn More</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

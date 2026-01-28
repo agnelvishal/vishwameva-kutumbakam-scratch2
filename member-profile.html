@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision & Mission | Vishwameva Kutumbakam</title>
-    <meta name="description" content="Our Vision and Mission - Vishwameva Kutumbakam">
+    <title>Member Profile | Vishwameva Kutumbakam</title>
+    <meta name="description" content="Manage your Vishwameva Kutumbakam member profile.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -44,10 +43,10 @@
                         <ul class="nav-list">
                             <li><a href="index.html" class="nav-link">Home</a></li>
                             <li class="nav-dropdown">
-                                <a href="dream.html" class="nav-link active">The Dream</a>
+                                <a href="dream.html" class="nav-link">The Dream</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="story.html">Our Dream Story</a></li>
-                                    <li><a href="vision.html" class="active">Vision & Mission</a></li>
+                                    <li><a href="vision.html">Vision & Mission</a></li>
                                     <li><a href="blog.html">Wildest Dream Blog</a></li>
                                 </ul>
                             </li>
@@ -68,9 +67,9 @@
                                 </ul>
                             </li>
                             <li class="nav-dropdown">
-                                <a href="member-login.html" class="nav-link">Member Login</a>
+                                <a href="member-login.html" class="nav-link active">Member Login</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="member-profile.html">Member Profile</a></li>
+                                    <li><a href="member-profile.html" class="active">Member Profile</a></li>
                                     <li><a href="book-benefits.html">Book Benefits</a></li>
                                     <li><a href="forum.html">Members Forum</a></li>
                                 </ul>
@@ -82,46 +81,36 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Vision Section (Lavender) -->
-        <section class="vision-block bg-lavender">
-            <div class="container">
-                <h2 class="section-title">Vision - Vishwameva Kutumbakam</h2>
-                <div class="vision-text">
-                    <!-- Placeholder text from findings -->
-                    <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text”
-                        or double click me to add your own content and make changes to the font. I’m a great place for
-                        you to tell a story and let your users know a little more about you.</p>
-                </div>
-            </div>
-        </section>
+    <div class="profile-header">
+        <h1>My Profile</h1>
+    </div>
 
-        <!-- Mission Section (White) -->
-        <section class="vision-block bg-white">
-            <div class="container">
-                <h2 class="section-title">Mission - Akshaya Patra Economics Model</h2>
-                <div class="vision-text">
-                    <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text”
-                        or double click me to add your own content and make changes to the font. I’m a great place for
-                        you to tell a story and let your users know a little more about you.</p>
-                </div>
-            </div>
-        </section>
+    <main class="page-container">
+        <div class="profile-card">
+            <div class="profile-avatar">👤</div>
+            <h2 style="color: var(--color-purple); margin-bottom: 5px;">Dreamer One</h2>
+            <p style="color: #666; margin-bottom: 20px;">Citizen Member</p>
 
-        <!-- Trust Section (Peach) -->
-        <section class="vision-block bg-peach">
-            <div class="container">
-                <h2 class="section-title">Trust and Transparency</h2>
-                <div class="vision-text">
-                    <p>Trust is the reliance on the integrity, strength, and ability of a person or thing. Transparency
-                        is the quality of being open and honest, free from pretense or deceit.</p>
+            <div
+                style="text-align: left; max-width: 400px; margin: 0 auto; border-top: 1px solid #eee; padding-top: 20px;">
+                <div style="margin-bottom: 15px;">
+                    <strong>Email:</strong> dreamer.one@example.com
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <strong>Joined:</strong> January 2023
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <strong>Status:</strong> <span style="color: var(--color-green); font-weight: 600;">Active</span>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <strong>Abode:</strong> Auroville Sanctuary
                 </div>
             </div>
-        </section>
+
+            <button class="login-btn" style="width: auto; padding: 10px 30px; margin-top: 20px;">Edit Profile</button>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <h3 class="footer-title">Reach Us</h3>
