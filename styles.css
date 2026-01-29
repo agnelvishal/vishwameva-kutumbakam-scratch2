@@ -927,7 +927,7 @@ body {
 }
 
 .split-title {
-    font-family: 'Azeret Mono', monospace;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -947,7 +947,7 @@ body {
 }
 
 .split-text {
-    font-family: 'Azeret Mono', monospace;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -1025,7 +1025,7 @@ body {
     color: white;
     font-weight: 600;
     font-size: 16px;
-    font-family: 'Azeret Mono', monospace;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
 }
 
 .page-nav a:hover,
@@ -1070,7 +1070,7 @@ body {
 }
 
 .card-title {
-    font-family: 'Azeret Mono', monospace;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
     font-size: 20px;
     font-weight: 700;
     color: var(--color-orange);
