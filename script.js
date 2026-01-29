@@ -80,9 +80,14 @@ function highlightNavigation() {
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
+                const href = link.getAttribute('href');
+                // Only update active state for hash links (anchor tags on the same page)
+                // This prevents removing the 'active' class from page links like index.html
+                if (href && href.startsWith('#')) {
+                    link.classList.remove('active');
+                    if (href === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
                 }
             });
         }
