@@ -564,11 +564,16 @@ body {
 }
 
 .dive-icon {
-    width: 30px;
-    height: auto;
-    filter: brightness(0) invert(1);
-    display: none;
-    /* Hide icons if not present in target text-only links */
+    width: auto;
+    /* Allow natural width */
+    height: 40px;
+    /* Fixed height as per images */
+    margin-right: 15px;
+    object-fit: contain;
+    display: block;
+    /* Ensure visibility */
+    filter: none;
+    /* Remove filter if previously applied, user wants exact image */
 }
 
 .dive-text {
