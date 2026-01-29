@@ -173,7 +173,7 @@ body {
     }
 
     .sub-title {
-        font-size: 8px;
+        font-size: 14px;
     }
 
     .nav-link {
@@ -485,6 +485,16 @@ body {
     /* Clean background - remove gradients if not matching exactly, but keeping clean */
 }
 
+.dive-section-title {
+    color: rgb(59, 104, 48);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
+}
+
 .dive-container {
     display: flex;
     flex-direction: column;
@@ -649,8 +659,7 @@ body {
     }
 
     .dive-center {
-        order: -1;
-        /* Move logo to top on mobile */
+        /* order: -1; Removed to keep logo in center between blocks */
         margin-bottom: 10px;
     }
 }
@@ -1529,6 +1538,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        margin: 0px 0;
+    }
+
     .header-content {
         flex-wrap: wrap;
         /* Removed position: relative to allow hamburger to position against fixed header */
@@ -1645,12 +1658,12 @@ body {
     }
 
     .main-title {
-        font-size: 10px;
+        font-size: 21px;
         letter-spacing: 0.5px;
     }
 
     .sub-title {
-        font-size: 6px;
+        font-size: 13px;
         letter-spacing: 1px;
     }
 
