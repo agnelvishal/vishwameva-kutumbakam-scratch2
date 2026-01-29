@@ -1538,9 +1538,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
+    /* .container {
         margin: 0px 0;
-    }
+    } */
 
     .header-content {
         flex-wrap: wrap;
