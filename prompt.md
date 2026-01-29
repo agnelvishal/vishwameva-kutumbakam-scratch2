@@ -1,8 +1,23 @@
 
+--
+The website in this folder should look exactly same as https://vishwamevakutumbak.wixsite.com/vishwameva-book
+
 
 
 --
 Overall task: Create website same as https://vishwamevakutumbak.wixsite.com/vishwameva-book
+
+--
+
+
+The footer in https://vishwamevakutumbak.wixsite.com/vishwameva-booklooks like the attached image.
+Change the colors of footer in this folder to match https://vishwamevakutumbak.wixsite.com/vishwameva-book
+Download the images used in footer in https://vishwamevakutumbak.wixsite.com/vishwameva-book and use in this folder also.
+
+The html section of footer in https://vishwamevakutumbak.wixsite.com/vishwameva-book is below
+
+---
+
 
 Download and Use the same images from this website https://vishwamevakutumbak.wixsite.com/vishwameva-book in the local project.
 
