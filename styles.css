@@ -1629,9 +1629,24 @@ body {
     }
 
     .cards-grid,
-    .zen-grid,
     .membership-grid {
         grid-template-columns: 1fr;
+    }
+
+    .zen-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .zen-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .zen-card img {
+        height: 200px;
+        /* Reduce height for mobile proportionality */
+        object-fit: cover;
     }
 
     .hero-banner h2 {
