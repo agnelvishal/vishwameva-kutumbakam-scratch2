@@ -107,7 +107,7 @@ class AuthManager {
             const { data, error } = await supabaseClient.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: `${window.location.origin}/member-profile.html`
+                    redirectTo: 'https://vishwamevakutumbak2.netlify.app/member-profile.html'
                 }
             });
 
@@ -126,7 +126,7 @@ class AuthManager {
             const { data, error } = await supabaseClient.auth.signInWithOAuth({
                 provider: 'facebook',
                 options: {
-                    redirectTo: `${window.location.origin}/member-profile.html`
+                    redirectTo: 'https://vishwamevakutumbak2.netlify.app/member-profile.html'
                 }
             });
 
@@ -156,7 +156,7 @@ class AuthManager {
     async resetPassword(email) {
         try {
             const { data, error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-                redirectTo: `${window.location.origin}/member-login.html`,
+                redirectTo: 'https://vishwamevakutumbak2.netlify.app/member-login.html',
             });
 
             if (error) throw error;
