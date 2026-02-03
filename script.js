@@ -128,7 +128,7 @@ document.querySelectorAll('.info-card, .zen-card, .membership-card').forEach(el 
 
 // Sign In button functionality
 document.querySelector('.sign-in-btn').addEventListener('click', () => {
-    alert('Sign In functionality will be implemented soon!');
+    window.location.href = 'member-login.html';
 });
 
 // Learn More buttons
