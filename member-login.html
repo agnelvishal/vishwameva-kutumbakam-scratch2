@@ -82,8 +82,10 @@
 
     <div class="login-page">
         <div class="login-card">
-            <h2>Welcome Back</h2>
-            <form action="#">
+            <h2 id="form-title">Welcome Back</h2>
+            <div id="message-container" style="margin-bottom: 15px;"></div>
+            
+            <form id="auth-form">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Enter your email" required>
@@ -92,19 +94,19 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="login-btn">Log In</button>
+                <button type="submit" class="login-btn" id="submit-btn">Log In</button>
                 <div style="margin-top: 15px; font-size: 14px;">
-                    <a href="#" style="color: var(--color-green); text-decoration: none;">Forgot password?</a>
+                    <a href="#" id="forgot-password-link" style="color: var(--color-green); text-decoration: none;">Forgot password?</a>
                 </div>
             </form>
 
             <div class="social-login">
-                <button class="social-btn">Continue with Google</button>
-                <button class="social-btn">Continue with Facebook</button>
+                <button class="social-btn" id="google-btn">Continue with Google</button>
+                <button class="social-btn" id="facebook-btn">Continue with Facebook</button>
             </div>
 
             <div style="margin-top: 20px; font-size: 14px;">
-                New to this community? <a href="#" style="color: var(--color-green); font-weight: 600;">Sign Up</a>
+                <span id="toggle-text">New to this community?</span> <a href="#" id="toggle-mode" style="color: var(--color-green); font-weight: 600;">Sign Up</a>
             </div>
         </div>
     </div>
@@ -141,6 +143,110 @@
         </div>
     </footer>
 
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Supabase Auth Script -->
+    <script src="supabase-auth.js"></script>
+    
+    <!-- Login Page Script -->
+    <script>
+        let isSignUpMode = false;
+
+        // Toggle between Sign In and Sign Up
+        document.getElementById('toggle-mode').addEventListener('click', (e) => {
+            e.preventDefault();
+            isSignUpMode = !isSignUpMode;
+            
+            if (isSignUpMode) {
+                document.getElementById('form-title').textContent = 'Create Account';
+                document.getElementById('submit-btn').textContent = 'Sign Up';
+                document.getElementById('toggle-text').textContent = 'Already have an account?';
+                document.getElementById('toggle-mode').textContent = 'Sign In';
+                document.getElementById('forgot-password-link').style.display = 'none';
+            } else {
+                document.getElementById('form-title').textContent = 'Welcome Back';
+                document.getElementById('submit-btn').textContent = 'Log In';
+                document.getElementById('toggle-text').textContent = 'New to this community?';
+                document.getElementById('toggle-mode').textContent = 'Sign Up';
+                document.getElementById('forgot-password-link').style.display = 'inline';
+            }
+            
+            // Clear message container
+            document.getElementById('message-container').innerHTML = '';
+        });
+
+        // Handle form submission
+        document.getElementById('auth-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const messageContainer = document.getElementById('message-container');
+            
+            messageContainer.innerHTML = '<div style="color: #666; font-size: 14px;">Processing...</div>';
+            
+            let result;
+            if (isSignUpMode) {
+                result = await authManager.signUp(email, password);
+            } else {
+                result = await authManager.signIn(email, password);
+            }
+            
+            if (result.success) {
+                if (isSignUpMode) {
+                    messageContainer.innerHTML = `<div style="color: var(--color-green); font-size: 14px;">${result.message}</div>`;
+                } else {
+                    showMessage('Successfully signed in!');
+                }
+            } else {
+                messageContainer.innerHTML = `<div style="color: #f44336; font-size: 14px;">${result.error}</div>`;
+            }
+        });
+
+        // Handle Google sign in
+        document.getElementById('google-btn').addEventListener('click', async () => {
+            const result = await authManager.signInWithGoogle();
+            if (!result.success) {
+                showMessage(result.error, true);
+            }
+        });
+
+        // Handle Facebook sign in
+        document.getElementById('facebook-btn').addEventListener('click', async () => {
+            const result = await authManager.signInWithFacebook();
+            if (!result.success) {
+                showMessage(result.error, true);
+            }
+        });
+
+        // Handle forgot password
+        document.getElementById('forgot-password-link').addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            if (!email) {
+                showMessage('Please enter your email address first', true);
+                return;
+            }
+            
+            const result = await authManager.resetPassword(email);
+            if (result.success) {
+                showMessage(result.message);
+            } else {
+                showMessage(result.error, true);
+            }
+        });
+
+        // Redirect if already logged in
+        (async () => {
+            const user = await authManager.getCurrentUser();
+            if (user) {
+                window.location.href = 'member-profile.html';
+            }
+        })();
+    </script>
+    
     <script src="script.js"></script>
 </body>
 
