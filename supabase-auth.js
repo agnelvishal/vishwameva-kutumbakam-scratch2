@@ -1,6 +1,11 @@
 // Supabase Configuration
-const SUPABASE_URL = 'https://pnmhvwhyjbyequlonqzy.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBubWh2d2h5amJ5ZXF1bG9ucXp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4ODE3NzMsImV4cCI6MjA4NTQ1Nzc3M30.YgdZ0vnrAo58za7F-RMRF8FTL8yoMn-bU33F8jLTDcE';
+// Use environment variables if available, otherwise use hardcoded values (for browser compatibility)
+const SUPABASE_URL = typeof process !== 'undefined' && process.env?.SUPABASE_URL
+    ? process.env.SUPABASE_URL
+    : 'https://pnmhvwhyjbyequlonqzy.supabase.co';
+const SUPABASE_ANON_KEY = typeof process !== 'undefined' && process.env?.SUPABASE_ANON_KEY
+    ? process.env.SUPABASE_ANON_KEY
+    : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBubWh2d2h5amJ5ZXF1bG9ucXp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4ODE3NzMsImV4cCI6MjA4NTQ1Nzc3M30.YgdZ0vnrAo58za7F-RMRF8FTL8yoMn-bU33F8jLTDcE';
 
 // Initialize Supabase client
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);

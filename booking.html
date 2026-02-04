@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay | Vishwameva Kutumbakam</title>
+    <meta name="description" content="Book your stay at one of our Zen Abodes.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .booking-container {
+            max-width: 800px;
+            margin: 100px auto 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-container h1 {
+            color: var(--color-green);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .booking-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--color-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .booking-btn:hover {
+            background: var(--color-dark-green);
+            transform: translateY(-2px);
+        }
+
+        .booking-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-message {
+            color: #f44336;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .success-message {
+            color: var(--color-green);
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--color-green);
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Vishwameva Kutumbakam Logo" class="header-logo">
+                        </a>
+                    </div>
+                    <div class="header-title">
+                        <h1 class="main-title">VISHWAMEVA KUTUMBAKAM</h1>
+                        <p class="sub-title">THE UNIVERSAL FAMILY</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="sign-in-btn">Sign In</button>
+                        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="booking-container">
+        <h1>Book Your Zen Abode Stay</h1>
+
+        <div class="info-box">
+            <strong>Note:</strong> You must be logged in to make a booking. Please sign in or create an account first.
+        </div>
+
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="location">Select Location *</label>
+                <select id="location" required>
+                    <option value="">Choose a location...</option>
+                    <option value="Auroville">Auroville, India</option>
+                    <option value="Angkor Wat">Angkor Wat, Cambodia</option>
+                    <option value="Fiordland">Fiordland, New Zealand</option>
+                    <option value="Akureyri">Akureyri, Iceland</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="check-in">Check-in Date *</label>
+                <input type="date" id="check-in" required>
+            </div>
+
+            <div class="form-group">
+                <label for="check-out">Check-out Date *</label>
+                <input type="date" id="check-out" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests *</label>
+                <input type="number" id="guests" min="1" max="10" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests (Optional)</label>
+                <textarea id="special-requests" placeholder="Any special requirements or preferences..."></textarea>
+            </div>
+
+            <div id="message-container"></div>
+
+            <button type="submit" class="booking-btn" id="submit-btn">Book Now</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="SITE_FOOTER">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <h2 class="footer-title">Reach Us</h2>
+                <div class="social-icons">
+                    <a href="https://maps.app.goo.gl/CzQ4zv38zjan3mKCA" target="_self" class="social-icon-link">
+                        <img src="assets/footer_contact.png" alt="Contact" width="29" height="29">
+                    </a>
+                    <a href="https://wa.me/917868001291" target="_blank" rel="noreferrer noopener"
+                        class="social-icon-link">
+                        <img src="assets/footer_whatsapp.png" alt="WhatsApp" width="29" height="29">
+                    </a>
+                    <a href="https://www.instagram.com/RAVICAN/" target="_blank" rel="noreferrer noopener"
+                        class="social-icon-link">
+                        <img src="assets/footer_instagram.png" alt="Instagram" width="29" height="29">
+                    </a>
+                    <a href="https://www.facebook.com/ravican@yahoo.com" target="_blank" rel="noreferrer noopener"
+                        class="social-icon-link">
+                        <img src="assets/footer_facebook.png" alt="Facebook" width="29" height="29">
+                    </a>
+                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noreferrer noopener"
+                        class="social-icon-link">
+                        <img src="assets/footer_tripadvisor.png" alt="TripAdvisor" width="29" height="29">
+                    </a>
+                </div>
+                <h4 class="copyright">Copyright © 2023 vishwamevakutumbakam.com™. All rights reserved.</h4>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase Auth Script -->
+    <script src="supabase-auth.js"></script>
+
+    <!-- Supabase Database Script -->
+    <script src="supabase-db.js"></script>
+
+    <!-- Booking Form Script -->
+    <script>
+        // Check if user is logged in
+        (async () => {
+            const user = await authManager.getCurrentUser();
+            if (!user) {
+                const messageContainer = document.getElementById('message-container');
+                messageContainer.innerHTML = '<div class="error-message">You must be logged in to make a booking. <a href="member-login.html">Sign in here</a></div>';
+                document.getElementById('submit-btn').disabled = true;
+            }
+        })();
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('check-in').min = today;
+        document.getElementById('check-out').min = today;
+
+        // Update check-out minimum when check-in changes
+        document.getElementById('check-in').addEventListener('change', (e) => {
+            const checkIn = e.target.value;
+            document.getElementById('check-out').min = checkIn;
+        });
+
+        // Handle form submission
+        document.getElementById('booking-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const messageContainer = document.getElementById('message-container');
+            const submitBtn = document.getElementById('submit-btn');
+
+            // Get form values
+            const bookingData = {
+                locationName: document.getElementById('location').value,
+                checkInDate: document.getElementById('check-in').value,
+                checkOutDate: document.getElementById('check-out').value,
+                numberOfGuests: parseInt(document.getElementById('guests').value),
+                specialRequests: document.getElementById('special-requests').value
+            };
+
+            // Validate dates
+            if (new Date(bookingData.checkOutDate) <= new Date(bookingData.checkInDate)) {
+                messageContainer.innerHTML = '<div class="error-message">Check-out date must be after check-in date.</div>';
+                return;
+            }
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+            messageContainer.innerHTML = '<div style="color: #666;">Creating your booking...</div>';
+
+            // Create booking
+            const result = await createBooking(bookingData);
+
+            if (result.success) {
+                messageContainer.innerHTML = '<div class="success-message">Booking created successfully! Redirecting to your profile...</div>';
+
+                // Reset form
+                document.getElementById('booking-form').reset();
+
+                // Redirect to profile after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'member-profile.html';
+                }, 2000);
+            } else {
+                messageContainer.innerHTML = `<div class="error-message">Error: ${result.error}</div>`;
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Book Now';
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
