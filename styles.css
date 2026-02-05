@@ -1542,9 +1542,56 @@ body {
         margin: 0px 0;
     } */
 
+    .header {
+        min-height: 80px;
+        padding-bottom: 5px;
+    }
+
     .header-content {
-        flex-wrap: wrap;
-        /* Removed position: relative to allow hamburger to position against fixed header */
+        flex-wrap: nowrap;
+        gap: 5px;
+        position: relative;
+    }
+
+    .header-top {
+        flex-wrap: nowrap;
+        gap: 5px;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    .header-logo {
+        height: 60px;
+    }
+
+    .header-title {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    .main-title {
+        font-size: 16px;
+        white-space: nowrap;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .sub-title {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .header-actions {
+        flex-shrink: 0;
+        gap: 5px;
     }
 
     /* Hide navigation and sign-in button on mobile */
@@ -1568,10 +1615,7 @@ body {
     /* Show hamburger menu on mobile */
     .hamburger-menu {
         display: flex;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
     }
 
     .nav-list {
