@@ -48,9 +48,14 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
+}
+
+.header > .container {
+    max-width: 100%;
+    padding: 0 15px;
 }
 
 .header-content {
@@ -97,22 +102,22 @@ body {
 
 .main-title {
     font-family: 'SanskritFont', georgia, palatino, "book antiqua", "palatino linotype", serif;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
     color: var(--color-green);
     margin: 0;
     line-height: 1.2;
-    letter-spacing: normal;
+    letter-spacing: 1px;
     white-space: nowrap;
 }
 
 .sub-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--color-green);
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: normal;
+    letter-spacing: 2px;
     white-space: nowrap;
     font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
 }
@@ -135,15 +140,24 @@ body {
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 20px;
-    /* More space now that it has its own row */
+    gap: 0;
+    /* No gap - borders create visual separation */
+}
+
+.nav-list > li {
+    border: 1px solid var(--color-green);
+    border-right: none;
+}
+
+.nav-list > li:last-child {
+    border-right: 1px solid var(--color-green);
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--color-green);
-    padding: 0 10px;
-    border-radius: 5px;
+    padding: 4px 20px;
+    border-radius: 0;
     font-size: 15px;
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
@@ -219,22 +233,24 @@ body {
     padding-left: 25px;
 }
 
-.sign-in-btn {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+/* Desktop Profile Icon */
+.desktop-profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.desktop-profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: #333;
     transition: all 0.3s ease;
 }
 
-.sign-in-btn:hover {
-    background: #ff6b35;
+.desktop-profile-icon:hover svg {
+    fill: #ff6b35;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
 }
 
 /* Hero Section */
@@ -1681,7 +1697,7 @@ body {
         overflow-y: auto;
     }
 
-    .sign-in-btn {
+    .desktop-profile-icon {
         display: none;
     }
 
