@@ -1590,6 +1590,7 @@ body {
         padding: 0;
         margin: 0;
         max-width: 100%;
+        width: 100%;
     }
 
     .header-content {
@@ -1644,6 +1645,7 @@ body {
         gap: 8px;
         min-width: 80px;
         justify-content: flex-end;
+        margin-left: auto;
     }
 
     .mobile-profile-icon svg {
