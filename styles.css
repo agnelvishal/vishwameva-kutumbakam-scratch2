@@ -443,7 +443,7 @@ body {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px;
+        padding-top: 85px;
     }
 
     .hero-slider {
@@ -1580,46 +1580,53 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* .container {
-        margin: 0px 0;
-    } */
 
     .header {
-        min-height: 95px;
-        padding-bottom: 5px;
+        min-height: auto;
+        padding: 5px 0;
+    }
+
+    .header .container {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
     }
 
     .header-content {
         flex-wrap: nowrap;
-        gap: 5px;
+        gap: 0;
         position: relative;
     }
 
     .header-top {
         flex-wrap: nowrap;
-        gap: 5px;
+        gap: 0;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 8px 0 0;
+    }
+
+    .header-bottom {
+        display: none;
     }
 
     .logo {
         flex-shrink: 0;
-        margin-right: 10px;
+        margin-right: 0;
     }
 
     .header-logo {
-        height: 75px;
+        height: 70px;
     }
 
     .header-title {
         flex: 1;
         min-width: 0;
         text-align: center;
-        padding: 0;
+        padding: 0 2px;
     }
 
     .main-title {
-        font-size: 16px;
+        font-size: 18px;
         white-space: nowrap;
         line-height: 1.2;
         overflow: hidden;
@@ -1627,13 +1634,32 @@ body {
     }
 
     .sub-title {
-        font-size: 10px;
+        font-size: 11px;
         white-space: nowrap;
+        letter-spacing: 0.5px;
     }
 
     .header-actions {
         flex-shrink: 0;
-        gap: 5px;
+        gap: 8px;
+        min-width: 80px;
+        justify-content: flex-end;
+    }
+
+    .mobile-profile-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: relative;
+        width: 34px;
+        height: 28px;
+    }
+
+    .hamburger-menu span {
+        height: 4px;
     }
 
     /* Hide navigation and sign-in button on mobile */
@@ -1652,12 +1678,6 @@ body {
 
     .sign-in-btn {
         display: none;
-    }
-
-    /* Show hamburger menu on mobile */
-    .hamburger-menu {
-        display: flex;
-        position: relative;
     }
 
     .nav-list {
@@ -1731,7 +1751,6 @@ body {
 
     .zen-card img {
         height: 200px;
-        /* Reduce height for mobile proportionality */
         object-fit: cover;
     }
 
@@ -1741,35 +1760,6 @@ body {
 
     .section-title {
         font-size: 28px;
-    }
-
-    .logo-text h1 {
-        font-size: 16px;
-    }
-
-    .logo-text p {
-        font-size: 9px;
-    }
-
-    /* Mobile Header Title Adjustments */
-    .header-title {
-        width: auto;
-        padding: 0 2px;
-        pointer-events: auto;
-    }
-
-    .main-title {
-        font-size: 21px;
-        letter-spacing: 0.5px;
-    }
-
-    .sub-title {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
-
-    .header-logo {
-        height: 45px;
     }
 
     .locations-grid {
