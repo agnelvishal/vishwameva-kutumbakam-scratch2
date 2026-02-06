@@ -597,7 +597,6 @@ body {
 }
 
 .dive-center {
-    height: 192px;
     /* Exact gap */
     display: flex;
     justify-content: center;
@@ -609,11 +608,13 @@ body {
     background-color: var(--color-purple);
     align-items: center;
     /* Center content in block */
+    color: rgb(254, 229, 194);
 }
 
 .dive-right {
     background-color: var(--color-orange);
     align-items: center;
+    color: white;
 }
 
 .dive-link {
@@ -621,9 +622,8 @@ body {
     align-items: center;
     gap: 15px;
     text-decoration: none;
-    color: white;
+    color: inherit;
     margin-bottom: 25px;
-    width: 100%;
     transition: transform 0.2s;
 }
 
@@ -652,6 +652,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.4;
+    text-decoration: underline;
 }
 
 /* Center Logo Styles */
