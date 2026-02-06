@@ -432,6 +432,14 @@ body {
     /* Determine if needed based on card color */
 }
 
+/* Mobile Profile Icon - hidden on desktop */
+.mobile-profile-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     body {
@@ -440,7 +448,46 @@ body {
 
     .hero-slider {
         aspect-ratio: auto;
-        height: 300px;
+        height: auto;
+        min-height: unset;
+    }
+
+    .hero {
+        padding-bottom: 0;
+    }
+
+    .hero-banner {
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide.active {
+        position: relative;
+    }
+
+    .dot {
+        background: rgba(255, 102, 0, 0.5);
+    }
+
+    .dot.active {
+        background: rgb(255, 102, 0);
+    }
+
+    .mobile-profile-icon {
+        display: flex;
     }
 }
 
