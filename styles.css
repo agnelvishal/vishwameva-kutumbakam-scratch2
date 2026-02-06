@@ -729,8 +729,7 @@ body {
 
 /* Initiated Zen Abodes */
 .initiated-zen {
-    padding: 0px 0;
-    padding-top: 120px;
+    padding: 120px 0 40px 0;
     background: #994fb2;
     position: relative;
     overflow: hidden;
