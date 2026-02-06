@@ -729,8 +729,8 @@ body {
 
 /* Initiated Zen Abodes */
 .initiated-zen {
-    padding: 80px 0;
-    padding-top: 200px;
+    padding: 0px 0;
+    padding-top: 120px;
     background: #994fb2;
     position: relative;
     overflow: hidden;
@@ -743,7 +743,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 120%;
-    height: calc(100% - 120px);
+    height: calc(100% - 15px);
     background: #97bb89;
     border-radius: 50% 50% 0 0;
     z-index: 0;
@@ -1814,12 +1814,12 @@ body {
     }
 
     .initiated-zen {
-        padding-top: 150px;
+        padding-top: 100px;
     }
 
     .initiated-zen::before {
-        height: calc(100% - 80px);
-        width: 150%;
+        height: calc(100% - 10px);
+        width: 250%;
     }
 
     .hero-banner h2 {
