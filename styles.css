@@ -730,7 +730,28 @@ body {
 /* Initiated Zen Abodes */
 .initiated-zen {
     padding: 80px 0;
+    padding-top: 200px;
+    background: #994fb2;
+    position: relative;
+    overflow: hidden;
+}
+
+.initiated-zen::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: calc(100% - 120px);
     background: #97bb89;
+    border-radius: 50% 50% 0 0;
+    z-index: 0;
+}
+
+.initiated-zen > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .section-description {
@@ -1790,6 +1811,15 @@ body {
     .zen-card img {
         height: 200px;
         object-fit: cover;
+    }
+
+    .initiated-zen {
+        padding-top: 150px;
+    }
+
+    .initiated-zen::before {
+        height: calc(100% - 80px);
+        width: 150%;
     }
 
     .hero-banner h2 {
