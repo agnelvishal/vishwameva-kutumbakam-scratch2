@@ -1649,6 +1649,7 @@ body {
     .mobile-profile-icon svg {
         width: 36px;
         height: 36px;
+        fill: #333;
     }
 
     .hamburger-menu {
