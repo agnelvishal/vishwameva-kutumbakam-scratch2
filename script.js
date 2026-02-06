@@ -127,9 +127,12 @@ document.querySelectorAll('.info-card, .zen-card, .membership-card').forEach(el 
 });
 
 // Sign In button functionality
-document.querySelector('.sign-in-btn').addEventListener('click', () => {
-    window.location.href = 'member-login.html';
-});
+const signInBtn = document.querySelector('.sign-in-btn');
+if (signInBtn) {
+    signInBtn.addEventListener('click', () => {
+        window.location.href = 'member-login.html';
+    });
+}
 
 // Learn More buttons
 document.querySelectorAll('.learn-more-btn').forEach(btn => {

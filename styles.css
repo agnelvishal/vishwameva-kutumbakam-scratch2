@@ -262,7 +262,7 @@ body {
     position: relative;
     /* Added spacing per user request */
     /* Remove fixed height to allow content to flow naturally, or keep it but manage inner content */
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     /* Space for green banner */
     background: white;
     /* Changed from black as per site look */
@@ -737,7 +737,7 @@ body {
     max-width: 800px;
     margin: 0 auto 50px;
     font-size: 16px;
-    color: #555;
+    color: #000;
     line-height: 1.8;
 }
 
