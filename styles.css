@@ -1715,6 +1715,13 @@ body {
     display: flex !important;
 }
 
+
+@media (max-width: 400px) {
+    .main-title {
+        font-size: 14px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
