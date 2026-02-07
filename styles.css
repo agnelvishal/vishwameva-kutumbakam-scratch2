@@ -2085,3 +2085,26 @@ body {
     margin: 0;
     width: 100%;
 }
+
+/* Mobile Layout Revisions for Dream Page */
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    /* Ensure consistent Image -> Text flow on mobile */
+    .split-section:nth-of-type(even) {
+        flex-direction: column-reverse;
+    }
+
+    .split-block {
+        width: 100%;
+        padding: 40px 20px;
+        flex: auto;
+    }
+
+    .split-image {
+        min-height: 300px;
+    }
+}
