@@ -1980,3 +1980,12 @@ body {
     color: #666;
     margin-bottom: 20px;
 }
+
+/* Section Divider */
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-green);
+    margin: 0;
+    width: 100%;
+}
