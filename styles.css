@@ -542,7 +542,6 @@ body {
 
 /* Dive Deeper Section */
 .dive-deeper {
-    padding: 80px 0;
     font-family: 'Open Sans', sans-serif;
     /* Clean background - remove gradients if not matching exactly, but keeping clean */
 }
@@ -566,7 +565,7 @@ body {
     /* Gap handled by margin/height */
     max-width: 1200px;
     position: relative;
-    padding: 50px 0;
+    padding-bottom: 30px;
 }
 
 .dive-block {
@@ -925,8 +924,8 @@ body {
 
 .social-icon-link img {
     display: block;
-    width: 29px;
-    height: 29px;
+    width: 39px;
+    height: 39px;
     object-fit: contain;
 }
 
@@ -1099,11 +1098,10 @@ body {
 
 /* Page Header & Grid Styles (Reused) */
 .page-banner {
-    background-color: var(--color-purple);
     color: white;
     text-align: center;
     padding: 60px 20px;
-    background-image: linear-gradient(rgba(106, 52, 118, 0.8), rgba(106, 52, 118, 0.8)), url('assets/images/hero-collage.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url('assets/images/hero-collage.jpg');
     background-size: cover;
     background-position: center;
 }
