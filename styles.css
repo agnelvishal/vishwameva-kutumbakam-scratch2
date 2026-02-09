@@ -41,7 +41,7 @@ body {
 .header {
     background-color: #bedeb6;
     padding: 3px 0;
-    padding-bottom: 3px;
+    padding-bottom: 10px;
     min-height: 85px;
     position: fixed;
     top: 0;
@@ -60,24 +60,18 @@ body {
 
 .header-content {
     display: flex;
-    flex-direction: column;
-    /* Stack vertically */
-    gap: 5px;
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 15px;
     width: 100%;
 }
 
-.header-bottom {
+.header-center {
+    flex: 1;
     display: flex;
-    justify-content: center;
-    width: 100%;
-    border-top: none;
-    padding-top: 2px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .header-actions {
@@ -87,16 +81,14 @@ body {
 }
 
 .header-logo {
-    height: 60px;
+    height: 75px;
     width: auto;
 }
 
 /* Header Title */
 .header-title {
-    flex: 1;
     text-align: center;
     min-width: 0;
-    padding: 0 10px;
 }
 
 .main-title {
@@ -126,6 +118,8 @@ body {
     margin: 0;
     flex-shrink: 0;
     z-index: 100;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -264,8 +258,8 @@ body {
     /* Remove fixed height to allow content to flow naturally, or keep it but manage inner content */
     padding-bottom: 40px;
     /* Space for green banner */
-    margin-top: 10px;
-    /* Push down to clear nav bar */
+    margin-top: 0;
+    /* Remove gap - header padding extends to cover */
     background: white;
     /* Changed from black as per site look */
 }
