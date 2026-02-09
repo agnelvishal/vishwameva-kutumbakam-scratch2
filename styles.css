@@ -18,7 +18,7 @@ body {
     line-height: 1.6;
     color: #000;
     overflow-x: hidden;
-    padding-top: 140px;
+    padding-top: 100px;
     /* Account for fixed header */
 }
 
@@ -40,9 +40,9 @@ body {
 /* Header Styles */
 .header {
     background-color: #bedeb6;
-    padding: 5px 0;
-    padding-bottom: 5px;
-    min-height: 120px;
+    padding: 3px 0;
+    padding-bottom: 3px;
+    min-height: 85px;
     position: fixed;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@ body {
 }
 
 .header-logo {
-    height: 90px;
+    height: 60px;
     width: auto;
 }
 
@@ -101,7 +101,7 @@ body {
 
 .main-title {
     font-family: 'SanskritFont', georgia, palatino, "book antiqua", "palatino linotype", serif;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     color: var(--color-green);
     margin: 0;
@@ -111,7 +111,7 @@ body {
 }
 
 .sub-title {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     color: var(--color-green);
     margin: 0;
@@ -262,8 +262,10 @@ body {
     position: relative;
     /* Added spacing per user request */
     /* Remove fixed height to allow content to flow naturally, or keep it but manage inner content */
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     /* Space for green banner */
+    margin-top: 10px;
+    /* Push down to clear nav bar */
     background: white;
     /* Changed from black as per site look */
 }
@@ -280,7 +282,8 @@ body {
     margin: 0 auto;
     aspect-ratio: 16 / 9;
     /* Maintain a consistent aspect ratio */
-    min-height: 400px;
+    min-height: 300px;
+    max-height: 400px;
     background: white;
 }
 
@@ -318,14 +321,14 @@ body {
 
 /* Banner Styles */
 .hero-banner {
-    padding: 10px 0;
+    padding: 6px 0;
     /* Full width so no horizontal padding needed on container if text is centered */
     text-align: center;
     color: var(--color-cream);
     font-weight: 700;
     letter-spacing: normal;
     font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
     position: absolute;
     left: 0;
@@ -359,7 +362,7 @@ body {
 }
 
 .hero-banner h2 {
-    font-size: 24px;
+    font-size: 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     margin: 0;
 }
