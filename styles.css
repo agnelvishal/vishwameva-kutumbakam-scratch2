@@ -1711,11 +1711,7 @@ body {
 }
 
 
-@media (max-width: 400px) {
-    .main-title {
-        font-size: 14px;
-    }
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -2108,5 +2104,26 @@ body {
 
     .split-image {
         min-height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 365px) {
+    .main-title {
+        font-size: 13px;
+    }
+}
+
+
+
+@media (max-width: 330px) {
+    .header-actions {
+        gap: 0px;
+        min-width: 0px;
     }
 }
