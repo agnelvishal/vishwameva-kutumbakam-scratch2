@@ -1,4 +1,8 @@
 /* Sticky Menu Styles */
+sticky-menu {
+    display: contents;
+}
+
 #sticky-menu-container {
     position: fixed;
     bottom: 30px;
