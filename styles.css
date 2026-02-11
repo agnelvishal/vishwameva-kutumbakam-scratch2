@@ -1160,6 +1160,7 @@ body {
     min-height: 400px;
     display: flex;
     flex-direction: column;
+    border-radius: 1%;
 }
 
 .content-card-image {
@@ -1180,7 +1181,7 @@ body {
     font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
     font-size: 20px;
     font-weight: 700;
-    color: var(--color-orange);
+    color: rgb(255, 102, 0);
     margin-bottom: 15px;
     line-height: 1.4;
 }
@@ -1193,7 +1194,7 @@ body {
 
 .card-link {
     margin-top: 15px;
-    color: var(--color-purple);
+    color: rgb(255, 102, 0);
     font-weight: 600;
     text-decoration: none;
 }
