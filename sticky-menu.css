@@ -50,7 +50,7 @@
     z-index: 9999;
 }
 
-.social-btn {
+#sticky-menu-container .social-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -60,35 +60,43 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
     background: white;
+    padding: 0;
+    border: none;
     /* Default fallback */
 }
 
-.social-btn:hover {
+#sticky-menu-container .social-btn:hover {
     transform: scale(1.1);
 }
 
-.social-btn svg {
+#sticky-menu-container .social-btn svg {
     width: 24px;
     height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    flex-shrink: 0;
     fill: white;
 }
 
-.location-btn {
+#sticky-menu-container .location-btn {
     background-color: #00A699;
     /* Teal */
+    display: flex;
+    padding: 0;
+    border-radius: 50%;
 }
 
-.whatsapp-btn {
+#sticky-menu-container .whatsapp-btn {
     background-color: #25D366;
     /* WhatsApp Green */
 }
 
-.instagram-btn {
+#sticky-menu-container .instagram-btn {
     background-color: #000000;
     /* Black */
 }
 
-.facebook-btn {
+#sticky-menu-container .facebook-btn {
     background-color: #3b5998;
     /* Facebook Blue */
 }
