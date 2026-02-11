@@ -1,0 +1,151 @@
+/* Sticky Menu Styles */
+#sticky-menu-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+#sticky-menu-container.active .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9998;
+    /* Below buttons, above everything else */
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    align-items: center;
+    padding-right: 5px;
+    /* Alignment fix */
+}
+
+#sticky-menu-container.active .menu-items {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 9999;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    background: white;
+    /* Default fallback */
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.location-btn {
+    background-color: #00A699;
+    /* Teal */
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    /* WhatsApp Green */
+}
+
+.instagram-btn {
+    background-color: #000000;
+    /* Black */
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    /* Facebook Blue */
+}
+
+/* Force white icons if they aren't already */
+/* SVGs have fill:white set directly */
+
+.sticky-toggle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #4353FF;
+    /* Blue border */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10000;
+}
+
+.dots-icon {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #FF6600;
+    /* Orange dots */
+    border-radius: 50%;
+}
+
+.close-icon {
+    display: none;
+    font-size: 32px;
+    color: #FF6600;
+    /* Orange X */
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Active State for Toggle Button */
+#sticky-menu-container.active .sticky-toggle-btn {
+    background: white;
+    transform: rotate(0deg);
+    /* Optional rotation effect */
+}
+
+#sticky-menu-container.active .dots-icon {
+    display: none;
+}
+
+#sticky-menu-container.active .close-icon {
+    display: block;
+}
