@@ -1199,6 +1199,36 @@ body {
     text-decoration: none;
 }
 
+/* Clickable Card Wrapper */
+.card-clicakble-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.content-card {
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.content-card:hover .card-title {
+    color: #2c5f2d;
+    /* Green color on hover */
+    transition: color 0.3s ease;
+}
+
+.content-card:hover .card-link {
+    text-decoration: underline;
+}
+
 /* FAQ Styles */
 .faq-section {
     max-width: 800px;
@@ -2127,7 +2157,9 @@ body {
         gap: 0px;
         min-width: 0px;
     }
-}/* Blog Post Styles */
+}
+
+/* Blog Post Styles */
 .blog-container {
     max-width: 800px;
     margin: 0 auto;
