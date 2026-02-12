@@ -1261,6 +1261,29 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Solid color banner (no background image) */
+.page-banner-solid {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgb(185 153 192 / 98%);
+}
+
+.page-banner-solid h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #138808;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
+}
+
+.page-banner-solid p {
+    font-size: 18px;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
+}
+
 .page-nav {
     /* Was blog-nav */
     background-color: #af96b8;
