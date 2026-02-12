@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="sticky-menu.css">
 </head>
 
-<body>
-            <!-- Header -->
+<body class="get-involved-page">
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -101,45 +101,54 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <div class="page-banner">
-        <h1>Get Involved</h1>
-    </div>
+    <!-- Page Banner removed as per request -->
 
     <!-- Main Content -->
-    <main class="page-container">
-        <!-- Using a 3-col grid to link to sub-pages -->
-        <div class="cards-grid">
-            <!-- Types -->
-            <div class="content-card">
-                <div class="content-card-image" style="background-image: url('assets/images/hero-collage.jpg');"></div>
-                <div class="content-card-body">
-                    <h2 class="card-title">Membership Types</h2>
-                    <p class="card-text">Discover the different ways you can become a part of our global family. From
-                        Citizen to Founder.</p>
-                    <a href="membership-types.html" class="card-link">View Types</a>
-                </div>
+    <main class="page-container" style="max-width: 100%; padding: 0;">
+        <!-- Section 1: Membership Types -->
+        <div class="split-section">
+            <div class="split-half image-half">
+                <img src="assets/images/hero-collage.jpg" alt="Get Involved Community">
             </div>
+            <div class="split-half bg-purple split-content">
+                <h2 style="color: #2e4a27;">Membership Types</h2>
+                <p style="color: #2e4a27;">An effective FAQ resource can educate, inform, and naturally guide the user
+                    through your website’s content and toward the goals and results you have set.</p>
+                <!-- Using inline style for specific color overrides if needed, but class handling is better -->
+                <p style="color: #2e4a27;">An effective FAQ resource can educate, inform, and naturally guide the user
+                    through your website’s content and toward the goals and results you have set.</p>
 
-            <!-- Benefits -->
-            <div class="content-card">
-                <div class="content-card-image" style="background-image: url('assets/images/hero-mystery.jpg');"></div>
-                <div class="content-card-body">
-                    <h2 class="card-title">Membership Benefits</h2>
-                    <p class="card-text">Explore the exclusive benefits and privileges available to our members.</p>
-                    <a href="membership-benefits.html" class="card-link">See Benefits</a>
-                </div>
+                <a href="membership-types.html" class="btn-learn-more btn-orange">Learn More</a>
             </div>
+        </div>
 
-            <!-- FAQs -->
-            <div class="content-card">
-                <div class="content-card-image" style="background-image: url('assets/images/hero-outing.jpg');"></div>
-                <div class="content-card-body">
-                    <h2 class="card-title">FAQs</h2>
-                    <p class="card-text">Have questions? Find answers to common queries about our community and
-                        membership.</p>
-                    <a href="faq.html" class="card-link">Read FAQs</a>
-                </div>
+        <!-- Section 2: Membership Benefits -->
+        <div class="split-section">
+            <div class="split-half bg-white split-content">
+                <h2>Membership Benefits</h2>
+                <p>An effective FAQ resource can educate, inform, and naturally guide the user through your website’s
+                    content and toward the goals and results you have set.</p>
+                <p>An effective FAQ resource can educate, inform, and naturally guide the user through your website’s
+                    content and toward the goals and results you have set.</p>
+                <a href="membership-benefits.html" class="btn-learn-more btn-orange">Learn More</a>
+            </div>
+            <div class="split-half image-half">
+                <img src="assets/images/hero-outing.jpg" alt="Membership Benefits">
+            </div>
+        </div>
+
+        <!-- Section 3: FAQ -->
+        <div class="split-section">
+            <div class="split-half image-half">
+                <img src="assets/images/hero-travel.jpg" alt="Frequently Asked Questions">
+            </div>
+            <div class="split-half bg-cream split-content">
+                <h2>FAQ</h2>
+                <p>An effective FAQ resource can educate, inform, and naturally guide the user through your website’s
+                    content and toward the goals and results you have set.</p>
+                <p>An effective FAQ resource can educate, inform, and naturally guide the user through your website’s
+                    content and toward the goals and results you have set.</p>
+                <a href="faq.html" class="btn-learn-more btn-orange">Learn More</a>
             </div>
         </div>
     </main>
@@ -174,7 +183,7 @@
             </div>
         </div>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
     <sticky-menu></sticky-menu>
     <script src="sticky-menu-component.js"></script>
 </body>
