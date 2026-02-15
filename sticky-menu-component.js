@@ -9,7 +9,7 @@ class StickyMenu extends HTMLElement {
     async connectedCallback() {
         // Fetch the menu HTML (cached across instances)
         if (!menuHTMLPromise) {
-            menuHTMLPromise = fetch('sticky-menu.html').then(r => r.text());
+            menuHTMLPromise = fetch('/sticky-menu.html').then(r => r.text());
         }
         const html = await menuHTMLPromise;
 
