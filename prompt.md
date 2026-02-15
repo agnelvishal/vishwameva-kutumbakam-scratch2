@@ -1,4 +1,10 @@
 
+In http://127.0.0.1:5501/locations.html, there are few sections like Auroville which has linked page like http://127.0.0.1:5501/locations/auroville.html but most do not have pages. 
+
+Create pages for each section and link them in http://127.0.0.1:5501/locations.html
+
+The newly created pages can be similar to 
+
 --
 The website in this folder should look exactly same as https://vishwamevakutumbak.wixsite.com/vishwameva-book
 
