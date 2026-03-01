@@ -39,19 +39,18 @@ const htmlMinifyPlugin = () => {
 export default defineConfig({
     plugins: [
         obfuscator({
-            include: ['**/*.js'],
+            include: ['**/*.js', '*.js'],
             exclude: [/node_modules/],
             apply: 'build',
             debugger: true,
             options: {
                 compact: true,
-                controlFlowFlattening: true,
-                controlFlowFlatteningThreshold: 0.5,
+                controlFlowFlattening: false,
                 numbersToExpressions: true,
                 simplify: true,
                 stringArrayShuffle: true,
                 splitStrings: true,
-                stringArrayThreshold: 0.5
+                stringArrayThreshold: 0.1
             },
         }),
         htmlMinifyPlugin()
