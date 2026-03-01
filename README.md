@@ -25,20 +25,34 @@ Vishwameva Kutumbakam is a shared vision promoting unity, harmony, and the conce
 - Interactive hover effects
 - Mobile-friendly layout
 
-## Running Locally
+## Running Locally (Development)
 
-The website is currently running on:
-```
-http://localhost:3000
-```
+We use Vite to run a local development server with hot-module replacement and to build (minify) the website for production.
 
-To start the server manually:
+To install dependencies:
 ```bash
-cd /home/pinkpanther/.gemini/antigravity/scratch/vishwameva-kutumbakam
-npx serve .
+npm install
 ```
 
-Then open your browser and navigate to `http://localhost:3000`
+To start the local development server:
+```bash
+npm run dev
+```
+
+Then open your browser and navigate to the local URL provided by Vite (usually `http://localhost:5173`).
+
+## Building for Production (Minification)
+
+To minify the HTML, CSS, and JS files so that cloning the website becomes difficult, run:
+```bash
+npm run build
+```
+This will generate an optimized, minified version of the website in a new `dist/` directory.
+
+You can preview the minified production build locally with:
+```bash
+npm run preview
+```
 
 ## Future Enhancements
 
