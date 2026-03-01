@@ -45,12 +45,12 @@ export default defineConfig({
             debugger: true,
             options: {
                 compact: true,
-                controlFlowFlattening: false,
-                numbersToExpressions: true,
                 simplify: true,
-                stringArrayShuffle: true,
-                splitStrings: true,
-                stringArrayThreshold: 0.1
+                stringArray: true,
+                stringArrayThreshold: 0.1,
+                numbersToExpressions: false,
+                splitStrings: false,
+                controlFlowFlattening: false,
             },
         }),
         htmlMinifyPlugin()
