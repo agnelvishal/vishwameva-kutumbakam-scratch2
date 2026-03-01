@@ -42,7 +42,7 @@ export default defineConfig({
             include: ['**/*.js', '*.js'],
             exclude: [/node_modules/],
             apply: 'build',
-            debugger: true,
+            debugger: false,
             options: {
                 compact: true,
                 simplify: true,
