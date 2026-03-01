@@ -16,7 +16,7 @@
 </head>
 
 <body>
-            <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -305,7 +305,7 @@
     </style>
 
     <!-- Profile Page Script -->
-    <script>
+    <script type="module">
         async function loadProfile() {
             const user = await authManager.getCurrentUser();
 
@@ -428,7 +428,7 @@
         // Load profile on page load
         loadProfile();
     </script>
-<script type="module" src="script.js"></script>
+    <script type="module" src="script.js"></script>
     <sticky-menu></sticky-menu>
     <script type="module" src="sticky-menu-component.js"></script>
 </body>

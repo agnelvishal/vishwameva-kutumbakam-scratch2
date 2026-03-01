@@ -187,6 +187,7 @@ class AuthManager {
 
 // Initialize the auth manager globally
 const authManager = new AuthManager();
+window.authManager = authManager;
 
 // Helper function to show messages
 function showMessage(message, isError = false) {
@@ -212,6 +213,7 @@ function showMessage(message, isError = false) {
         setTimeout(() => messageDiv.remove(), 300);
     }, 3000);
 }
+window.showMessage = showMessage;
 
 // Add animations
 const style = document.createElement('style');

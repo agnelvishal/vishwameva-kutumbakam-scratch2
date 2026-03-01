@@ -316,3 +316,18 @@ function subscribeToBookings(callback) {
 function unsubscribe(subscription) {
     supabaseClient.removeChannel(subscription);
 }
+
+// Export functions to window since this is loaded as a module
+window.createBooking = createBooking;
+window.getUserBookings = getUserBookings;
+window.getBookingById = getBookingById;
+window.updateBooking = updateBooking;
+window.cancelBooking = cancelBooking;
+window.deleteBooking = deleteBooking;
+window.getUserProfile = getUserProfile;
+window.upsertUserProfile = upsertUserProfile;
+window.getAllLocations = getAllLocations;
+window.getLocationsByStatus = getLocationsByStatus;
+window.getLocationById = getLocationById;
+window.subscribeToBookings = subscribeToBookings;
+window.unsubscribe = unsubscribe;
